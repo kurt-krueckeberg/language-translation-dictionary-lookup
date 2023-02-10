@@ -1,5 +1,5 @@
 {
-    "name": "kurt-krueckeberg/systran-trqaslator",
+    "name": "kurt-krueckeberg/systran-pro-api",
     "description": "Systran translator REST API Language translation and dictionary lookup classes",
     "type": "library",
     "autoload": {
