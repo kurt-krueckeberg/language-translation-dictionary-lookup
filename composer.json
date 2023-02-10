@@ -1,0 +1,25 @@
+{
+    "name": "kurt-krueckeberg/systran-trqaslator",
+    "description": "Systran translator REST API Language translation and dictionary lookup classes",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "LanguageTools\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=8.1", 
+        "guzzlehttp/guzzle": "^7.4",
+        "ext-intl": "^8.1",
+        "ext-curl": "^8.1",
+        "ext-json": "^8.1",
+        "ext-tidy": "^8.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kurt Krueckeberg",
+            "email": "kurt.krueckeberg@gmail.com"
+        }
+    ]
+}

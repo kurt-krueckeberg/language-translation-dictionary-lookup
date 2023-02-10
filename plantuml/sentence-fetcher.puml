@@ -1,0 +1,15 @@
+interface SentenceFetchInterface  { 
+
+   fetch(string word, int count=3) : ResultsIterator;
+}
+
+class RestBase {
+   protected function request(string $method, string $route, array $options = array()) : string
+   public function __construct(string $base_uri, array $headers=array())
+}
+
+class LeipzigSentenceFetcher extends RestBase implements SentenceFetchInterface {
+  
+   public function __construct(Config $c)  
+   public function fetch(string $word, int $count=3) : ResultsIterator  
+  }

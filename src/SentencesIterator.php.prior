@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+namespace LanguageTools;
+
+class SentencesIterator extends \ArrayIterator {
+    
+    private $func;
+   
+    public function __construct(array $results, callable $func)
+    {
+       parent::__construct($results);
+       $this->func = $func;
+    }
+    
+   public function current() : string
+   {
+       return ($this->func)(parent::current());
+   }
+}

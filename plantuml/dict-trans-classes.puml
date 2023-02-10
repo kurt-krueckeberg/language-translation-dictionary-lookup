@@ -1,0 +1,62 @@
+interface TranslateInterface {
+
+   public function translate(string $str, string $dest_lang, string $src_lang="") : string;
+   public function getTranslationLanguages() : array;
+}
+
+interface DictionaryInterface {
+   
+   public function lookup(string $str, string $src_lang, string $dest_lang) : \Iterator; 
+   public function getDictionaryLanguages() : array; 
+}
+
+
+class RestBase {
+
+   public  __construct(string $base_uri, array $headers); 
+  
+   private $headers = array(); 
+}
+
+class AzureTranslator extends RestBase implements DictionaryInterface, TranslateInterface {
+   
+    public function __construct(ClassID id)
+   
+    public function getTranslationLanguages() : array
+
+    public function getDictionaryLanguages() : array 
+    
+    public function translate(string text, string dest_lang, source_lang="") : string 
+   
+   public function  lookup(string word, string src_lang, string dest_lang) : LookupIterator
+
+   public function examples(string word, array translations) : ResultsIterator
+}
+
+class DeeplTranslator extends RestBase implements TranslateInterface {
+   
+   public function __construct(ClassID id)
+   
+   public function getLanguages() : string
+
+   public function getSourceLanguages() : array
+
+   public function getTargetLanguages() : array
+   
+   public function getTranslationLanguages() : array
+
+   public function translate(string text, string dest_lang, source_lang="") : string 
+}
+
+class SystranTranslator extends RestBase implements DictionaryInterface, TranslateInterface {
+
+   public function __construct(ClassID id)
+   
+   public function getTranslationLanguages() : array
+
+   public function getDictionaryLanguages() : array 
+    
+   public function translate(string text, string dest_lang, source_lang="") : string 
+   
+   public function lookup(string $word, string $src_lang, string $dest_lang) : LookupIterator
+}

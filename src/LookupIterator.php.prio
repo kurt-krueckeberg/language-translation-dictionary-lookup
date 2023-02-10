@@ -1,0 +1,45 @@
+<?php
+declare(strict_types=1);
+namespace LanguageTools;
+
+abstract class LookupIterator implements \Iterator, \Countable { 
+ 
+    private array $results;
+ 
+    public function __construct(array $results)
+    {
+       $this->results = $results;
+    }
+    
+    abstract protected function get_result($mixed) : LookupResult;
+
+    public function count() : int
+    {
+       return count($this->results);
+    }
+
+    public function current() : LookupResult
+    {        
+        return $this->get_result(current($this->results));
+    }
+    
+    public function next() : void
+    {
+        next($this->results);
+    }
+
+   public function rewind() : void
+   {  
+      reset($this->results);
+   }
+ 
+   public function key() : int
+   {
+      return key(current($this->results));
+   }
+   
+   public function valid() : bool
+   {
+      return current($this->results) !== false ? true : false;
+   }
+}
