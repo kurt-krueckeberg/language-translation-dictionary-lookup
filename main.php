@@ -40,7 +40,7 @@ try {
       
         $cnt = $html->add_definitions($iter); 
 
-        echo ($cnt === 0 ? "No definitions " : "Defintions ") . "found for {$word.\n";   
+        echo ($cnt === 0 ? "No definitions " : "Defintions ") . "found for $word \n";   
 
           echo $word . "\n";
            
