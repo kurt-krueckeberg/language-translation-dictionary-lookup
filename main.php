@@ -40,13 +40,9 @@ try {
       
         $cnt = $html->add_definitions($iter); 
 
-        echo ($cnt === 0 ? "No definitions " : "Defintions ") . "found for {$a[0]}.\n";   
+        echo ($cnt === 0 ? "No definitions " : "Defintions ") . "found for {$word.\n";   
 
-        $sl = array_slice($a, count($a) == 1 ? 0 : 1);
-        
-        foreach ($sl as $word) {
-            
-           echo $word . "\n";
+          echo $word . "\n";
            
            $iter = $leipzig->fetch_samples($word, 5);
            
@@ -54,7 +50,6 @@ try {
            $cnt = $html->add_samples($iter, $sys); 
           
            echo   "Added $cnt samples sentences for $word.\n";
-       } 
     }
  
   } catch (Exception $e) {
