@@ -1,6 +1,6 @@
 ## Configuration
 
-Copy `src/sample-config.xml` to the root directory of your application as `config.x,l` and modify it with your Systran Pro or DEEPL API key(s).
+Copy `src/sample-config.xml` to the root directory of your application as `config.xml` and modify it with your Systran Pro or DEEPL API key(s).
 
 Tne .xml file looks like this:
 
