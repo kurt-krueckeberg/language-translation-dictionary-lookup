@@ -34,9 +34,7 @@ try {
   
     foreach ($file as $line) {
        
-        $a = explode('#', $line);
-        
-        $word = $a[0];
+        $word = trim($line);
         
         $iter = $sys->lookup($word, 'de', 'en');
       
