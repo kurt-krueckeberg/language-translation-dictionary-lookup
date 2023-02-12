@@ -2,7 +2,7 @@
 
 Copy `src/sample-config.xml` to the root directory of your application as `config.xml` and modify it with your Systran Pro or DEEPL API key(s).
 
-Tne .xml file looks like this:
+Tne .xml file looks like this. Modiy `add-your-key-here` to  be your actual API key.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
