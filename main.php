@@ -50,9 +50,9 @@ try {
             
            echo $word . "\n";
            
-           $iter = $leipzig->fetch($word, 5);
+           $iter = $leipzig->fetch_samples($word, 5);
            
-           // todo: must translate the samples.
+           // add_sample()  takes TranslateInterface
            $cnt = $html->add_samples($iter, $sys); 
           
            echo   "Added $cnt samples sentences for $word.\n";
