@@ -4,7 +4,7 @@ REST API Classes for:
 
 - Systran Pro Translation and Dictionary Lookup
 - Deepl Translator Class
-- Leipzig Sentence Corpus
+- Free Leipzig German Sentence Corpus
 
 ## Configuration
 
