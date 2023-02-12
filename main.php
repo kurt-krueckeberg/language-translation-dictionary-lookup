@@ -6,7 +6,6 @@ use LanguageTools\{SystranTranslator, LeipzigSentenceFetcher, FileReader, BuildH
 
 include 'vendor/autoload.php';
 
-
 if ($argc != 3) {
 
   echo "Enter the vocabulary words input file, followed by html file name (without .html).\n";
@@ -55,4 +54,4 @@ try {
   } catch (Exception $e) {
 
       echo "Exception: message = " . $e->getMessage() . "\nError Code = " . $e->getCode() . "\n";
-  } 
+  }

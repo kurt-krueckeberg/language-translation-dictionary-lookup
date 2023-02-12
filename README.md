@@ -9,11 +9,6 @@ REST API Classes for:
 ## Sample Application
 
 ```php
-<?php
-declare(strict_types=1);
-use \SplFileObject as File;
-use LanguageTools\{SystranTranslator, LeipzigSentenceFetcher, FileReader, BuildHtml, ConfigFile};
-
 include 'vendor/autoload.php';
 
 if ($argc != 3) {
@@ -43,21 +38,15 @@ try {
   
     foreach ($file as $line) {
        
-        $a = explode('#', $line);
-        
-        $word = $a[0];
+        $word = trim($line);
         
         $iter = $sys->lookup($word, 'de', 'en');
       
         $cnt = $html->add_definitions($iter); 
 
-        echo ($cnt === 0 ? "No definitions " : "Defintions ") . "found for {$a[0]}.\n";   
+        echo ($cnt === 0 ? "No definitions " : "Defintions ") . "found for $word \n";   
 
-        $sl = array_slice($a, count($a) == 1 ? 0 : 1);
-        
-        foreach ($sl as $word) {
-            
-           echo $word . "\n";
+          echo $word . "\n";
            
            $iter = $leipzig->fetch_samples($word, 5);
            
@@ -65,14 +54,13 @@ try {
            $cnt = $html->add_samples($iter, $sys); 
           
            echo   "Added $cnt samples sentences for $word.\n";
-       } 
     }
  
   } catch (Exception $e) {
 
       echo "Exception: message = " . $e->getMessage() . "\nError Code = " . $e->getCode() . "\n";
   }
-  ```
+```
 
 This is a collection of PHP client classes and interfaces that implement the REST APIs of a number of REST APIs:
 
