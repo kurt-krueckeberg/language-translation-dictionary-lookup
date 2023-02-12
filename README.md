@@ -6,6 +6,10 @@ REST API Classes for:
 - Deepl Translator Class
 - Leipzig Sentence Corpus
 
+## Configuration
+
+Copy `src/config.xml` to the root directory of your application and modify it with your Systran Pro or DEEPL API key(s).
+
 ## Sample Application
 
 ```php
