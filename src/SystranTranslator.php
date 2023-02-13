@@ -36,16 +36,16 @@ class SystranTranslator extends RestApi implements TranslateInterface, Dictionar
     *  NOTE: Systran requires the language codes to be lowercase.
     *  If the language is not utf-8, the default, then you must speciy the encoding using the 'options' parameter.
     */
-   final public function translate(string $text, string $dest, $src="") : string 
+   final public function translate(string $text, string $to, $from="") : string 
    {
        static $trans = array('method' => "POST", 'route' => "translation/text/translate");
 
        $query = array();
        
-       if ($src !== '') 
-           $query['source'] = strtolower($src);
+       if ($from !== '') 
+           $query['source'] = strtolower($from);
        
-       $query['target'] = strtolower($dest);
+       $query['target'] = strtolower($to);
        
        $query['input'] = $text;
        

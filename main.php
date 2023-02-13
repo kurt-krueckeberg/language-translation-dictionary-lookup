@@ -1,14 +1,13 @@
-#!/usr/bin/env php
 <?php
 declare(strict_types=1);
 use \SplFileObject as File;
-use LanguageTools\{SystranTranslator, LeipzigSentenceFetcher, FileReader, BuildHtml, ConfigFile};
+use LanguageTools\{SystranTranslator, LeipzigSentenceFetcher, FileReader, ConfigFile};
 
 include 'vendor/autoload.php';
 
-if ($argc != 3) {
+if ($argc != 2) {
 
-  echo "Enter the vocabulary words input file, followed by html file name (without .html).\n";
+  echo "Enter the vocabulary words input file.\n";
   return;
 
 } else if (! file_exists($argv[1]))  {
@@ -22,8 +21,6 @@ try {
     $fwords = $argv[1];
  
     $file = new FileReader($fwords);
-    
-    $html = new BuildHtml($argv[2], "de", "en");
 
     $c = new ConfigFile('config.xml');
     
@@ -33,26 +30,31 @@ try {
   
     foreach ($file as $line) {
        
-        $word = trim($line);
+      $word = trim($line);
         
-        $iter = $sys->lookup($word, 'de', 'en');
+      $iter = $sys->lookup($word, 'de', 'en');
       
-        if ($iter->valid() === false) 
+      if ($iter->valid() === false)  echo "No definitions found for $word./n";
 
-	   echo "No definitions found for $word./n";
+      else
+          foreach($iter as $val) 
+              print_r($val);
 
-	else
+      $iter = $leipzig->fetch_samples($word);
 
-            foreach($iter as $val) print_r($val);
+      if ($iter->valid() === false) continue;
 
-        $iter = $leipzig->fetch_samples($word, 5);
+      foreach($iter as $de) {
 
-        foreach($iter as $de) {
+        echo $de . "\n";
 
-        }
-           
-    }
- 
+        echo "Translation:\n";
+        
+        $t = $sys->translate($de, 'en', 'de');
+        
+        echo $t . "\n";
+      }           
+    } 
   } catch (Exception $e) {
 
       echo "Exception: message = " . $e->getMessage() . "\nError Code = " . $e->getCode() . "\n";

@@ -4,12 +4,18 @@ namespace LanguageTools;
 
 
 class  LookupResult {
-
-     /* 
-      The constructor simply creates and assigns the part-of-speech and a one-word definition.
-    */
+   
    public function __construct(public readonly string $word, public readonly string $pos, public readonly array $definitions) 
    {
        
    }
+
+   public function defns_toString() : string 
+   {
+   }
+  
+   public function __toString() : string 
+   {
+     echo $this->word . ' ' . 'part of speech: ' . $this->pos . "\nDefinitions:\n". $this->defns_toString();
+   }        
 }
