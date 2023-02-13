@@ -35,7 +35,7 @@ The client classes are:
 
 ### All Interfaces and Classes
 
-The UML of all the [Dictionary and Translation](/assets/images/dict-trans-classes.png) diagram (click to enlarge) related classes and interfaces:
+The UML diagram of all the [Dictionary and Translation](/assets/images/dict-trans-classes.png) diagram (click to enlarge) related classes and interfaces:
 
 ![UML Dictionary and Translation Classes and Interface Diagram](/assets/images/dict-trans-classes.png)
 
