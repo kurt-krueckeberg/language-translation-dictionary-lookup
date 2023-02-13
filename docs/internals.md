@@ -29,7 +29,7 @@ The client classes are:
 
 - `LeipzipSentenceFetcher`
 
-   Implements 'SentenceFetchInerface` whose 'fetch_sample` method Returns example sentences
+   Implements `SentenceFetchInerface` whose 'fetch_sample` method returns example sentences
 
 ## Code Internals
 
