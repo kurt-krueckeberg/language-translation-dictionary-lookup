@@ -1,22 +1,35 @@
-## Code Internals
+## Overview
 
-This is a collection of PHP client classes and interfaces that implement the REST APIs of a number of REST APIs:
-
-- `SystranTranslator`
-
-   Implements `TranslateInterface` and `DictionaryInterface`. Its `DiciontaryIntrface::lookup` method  often returns example phrases.
+PHP REST client classes and interfaces for several REST translation and dictionary services APIs. The base class for all these classes is:
 
 -  `RestBase`
 
     The base class for all dictionary qnd translation classes. 
+
+The client classes are:
+
+- `SystranTranslator`
+
+   implements `TranslateInterface` and `DictionaryInterface` for the Systran Pro API.
+   
+- `AzureTranslator`
+
+   implements `TranslateInterface` and `DictionaryInterface` for the Microsoft Azure Translation service.
 
 - `LeipzipSentenceFetcher`
 
    Implements 'SentenceFetchInerface` whose 'fetch` method Returns example sentences
 
 - `DEEPL` [Transaltor translation API](https://www.deepl.com/docs-api)
+  implements  `TranslateInterface` for the DEEP:P translation service.
+  
+ - `PonsDictionary` 
+   implements the `DictionaryInterface` for the free Pons dictionary API.
+  
+ - `CollinsGermanDictionary` 
+   implements the `DictionaryInterface` for the free Collinhs dictionary API(which requires an approval to obtains).
 
-## Implementation
+## Code Internals
 
 ### Translaton and Dictionary Interfaces and Classes
 
