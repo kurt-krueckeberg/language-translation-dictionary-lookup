@@ -1,3 +1,4 @@
+@startuml
 interface TranslateInterface {
    public function translate(string $str, string $dest_lang, string $src_lang="") : string;
    public function getTranslationLanguages() : array;
@@ -13,8 +14,10 @@ interface SentenceFetchInterface  {
 }
 
 class ResultsIterator extends \ArrayIterator {
-    public function __construct(array $results, callable $func)
+   public function __construct(array $results, callable $func)
+   public function current() : mixed
 }
+
 class RestApi {
    public  __construct(string $bas private $headers = array()
    protected function request(string $method, string $route, array $options = array()) : string
@@ -24,11 +27,6 @@ class LeipzigSentenceFetcher extends RestApi implements SentenceFetchInterface {
   
    public function __construct(Config $c)  
    public function fetch(string $word, int $count=3) : ResultsIterator  
-}
-
-class ResultsIterator extends \ArrayIterator {
-   public function __construct(array $results, callable $func)
-   public function current() : mixed
 }
 
 class  LookupResult {
@@ -45,5 +43,6 @@ class SystranTranslator extends RestApi implements TranslateInterface, Dictionar
    public function getTranslationLanguages() : array
    final public function getDictionaryLanguages() : array
    final public function lookup(string $word, string $src, string $dest) : LookupIterator
-   final public function translate(string $text, string $dest, $src="") : string 
+   final public function translate(string $text, string $dest, $src="") : string
 }
+@enduml
