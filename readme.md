@@ -30,7 +30,7 @@ Since both the HTML tags and the many classes used are undocumented, in order to
 for example, custom `XPath` queries that return the dictionary definitions, and any associated usage expressions. The `PonsIterator`and `CollinsIterator` attempt
 to do this.
 
-# Reference
+## Further Detailed Reference
 
 - [Configuration file format](docs/config.md)
 - [Sample Application](docs/app.md)
