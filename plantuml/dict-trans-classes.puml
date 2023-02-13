@@ -20,6 +20,11 @@ class ResultsIterator extends \ArrayIterator {
    public function __construct(array $results, callable $func)
 }
 
+class ResultsIterator extends \ArrayIterator {
+   public function __construct(array $results, callable $func)
+   public function current() : mixed
+}
+
 class  LookupResult {
    public function __construct(public readonly string $word, public readonly string $pos, public readonly array $definitions) 
 }
@@ -30,7 +35,6 @@ class LookupIterator extends ResultsIterator {
 }
 
 class SystranTranslator extends RestApi implements TranslateInterface, DictionaryInterface {
-
    public function __construct(ConfigFile $c)
    public function getTranslationLanguages() : array
    final public function getDictionaryLanguages() : array
