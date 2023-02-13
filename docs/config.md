@@ -23,6 +23,12 @@ Tne format of the XML file is shown below. Modify `add-your-key-here` with your 
                <header key="Authorization">Key add-your-key-here</header>
            </headers>
     </provider>
+    <provider name="collins" abbrev ="c">
+           <endpoint>https://api.collinsdictionary.com</endpoint>
+           <headers>
+               <header key="accessKey">add-your-key-here</header>
+           </headers>
+   </provider>
    <provider name='pons'>
        <!-- use the sample-config.xml as a guide to add the endpoint and your header(s) with your key(s) -->
     </provider> 
