@@ -37,20 +37,18 @@ try {
         
         $iter = $sys->lookup($word, 'de', 'en');
       
-        if ($iter->valid() === false) 
+        $cnt = $html->add_definitions($iter); 
 
-	   echo "No definitions found for $word./n";
+        echo ($cnt === 0 ? "No definitions " : "Defintions ") . "found for $word \n";   
 
-	else
-
-            foreach($iter as $val) print_r($val);
-
-        $iter = $leipzig->fetch_samples($word, 5);
-
-        foreach($iter as $de) {
-
-        }
+          echo $word . "\n";
            
+           $iter = $leipzig->fetch_samples($word, 5);
+           
+           // add_sample()  takes TranslateInterface
+           $cnt = $html->add_samples($iter, $sys); 
+          
+           echo   "Added $cnt samples sentences for $word.\n";
     }
  
   } catch (Exception $e) {
