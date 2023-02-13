@@ -16,4 +16,10 @@
                <header key="Authorization">Key add-your-key-here</header>
            </headers>
     </provider>
+    <provider name="pons" >
+          <endpoint>https://api.pons.com/v1/</endpoint>
+          <headers>
+             <header key="X-Secret">add-your-key-here</header>
+         </headers>
+   </provider>
 </providers>
