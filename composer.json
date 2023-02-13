@@ -1,5 +1,5 @@
 {
-    "name": "kurt-krueckeberg/systran-pro-api",
+    "name": "kurt-krueckeberg/language-translation-dictionary-lookup",
     "description": "Systran translator REST API Language translation and dictionary lookup classes, and Univ of Leipzig German sentence corpus sentence fetcher API.",
     "type": "library",
     "autoload": {
