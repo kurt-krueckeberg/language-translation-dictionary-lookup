@@ -23,13 +23,14 @@ These classes implement the `DictionaryInterface`:
 - AzureTranslator
 - SystranTranslator
 
-The `PonsDictionary` and `CollinsGermanDicionary` Lookup methods returns html (or xml in the case of PonsDictionary) results that are 
+The `PonsDictionary` and `CollinsGermanDicionary` Lookup methods return html (or also XML in the case of PonsDictionary) results that are 
 embedded within hmtl used to display the results on the PONS and Collins Dictionary websites, respectively.
 
-These html results contain many HTML tags using various CSS classes. Both the HTML tags and CSS classes are undocumented. Therefore, to
-extract the dicionary menaings, you must study the HTML results and create, for example, custom `XPath` queries.
+Since these HTML results contain many HTML tags that use various CSS classes. Both these HTML tags and CSS classes are undocumented. Therefore to
+extract the dicionary meanings, you must study the HTML results and create, for example, custom `XPath` queries. The `PonsIterator`and `CollinsIterator`
+attempt to do this.
 
-## Reference
+# Reference
 
 - [Configuration file format](docs/config.md)
 - [Sample Application](docs/app.md)
