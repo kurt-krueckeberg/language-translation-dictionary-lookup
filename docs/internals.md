@@ -1,6 +1,6 @@
 ## Overview
 
-PHP REST client classes and interfaces for several REST translation and dictionary services APIs. The base class for all these classes is:
+PHP REST client classes and interfaces for several REST language translation and dictionary services APIs. The base class for all these classes is:
 
 -  `RestBase`
 
