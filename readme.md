@@ -1,6 +1,6 @@
 # PHP Translation and Dictionary REST API Classes
 
-There are PHP classes that support:
+This repository contains PHP classes that support:
 
 - Translation and dictionary lookup.
 - Leipzig University Dept of Numerical Linguistics **German Sentence Corpus** REST API
