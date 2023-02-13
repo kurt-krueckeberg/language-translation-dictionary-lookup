@@ -6,15 +6,13 @@ interface TranslateInterface {
 
 interface DictionaryInterface {
    
-   public function lookup(string $str, string $src_lang, string $dest_lang) : \Iterator; 
-   public function getDictionaryLanguages() : array; 
+   public function lookup(string $str, string $src_lang, string $dest_lang) : \Iterator
+   public function getDictionaryLanguages() : array
 }
-
 
 class RestApi {
 
    public  __construct(string $base_uri, array $headers); 
-  
    private $headers = array(); 
 }
 
