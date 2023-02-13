@@ -8,10 +8,20 @@ interface DictionaryInterface {
    public function getDictionaryLanguages() : array
 }
 
+interface SentenceFetchInterface  { 
+   fetch(string word, int count=3) : ResultsIterator;
+}
+
 class RestApi {
    public  __construct(string $bas private $headers = array()
    protected function request(string $method, string $route, array $options = array()) : string
 }
+
+class LeipzigSentenceFetcher extends RestApi implements SentenceFetchInterface {
+  
+   public function __construct(Config $c)  
+   public function fetch(string $word, int $count=3) : ResultsIterator  
+  }
 
 class ResultsIterator extends \ArrayIterator {
     public function __construct(array $results, callable $func)
