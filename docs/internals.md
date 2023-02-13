@@ -60,7 +60,7 @@ interface SentenceFetchInterface  {
 
 class RestApi {
 
-   public  __construct(string $base_uri, array $headers); 
+   public  __construct(ConfigFile $c, ClassID $id);
   
    private $headers = array(); 
 }
