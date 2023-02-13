@@ -11,32 +11,22 @@ interface DictionaryInterface {
 }
 
 class RestApi {
-
    public  __construct(string $bas private $headers = array()
    protected function request(string $method, string $route, array $options = array()) : string
 }
 
 class ResultsIterator extends \ArrayIterator {
-  
+ 
    public function __construct(array $results, callable $func)
 }
 
 class  LookupResult {
-
    public function __construct(public readonly string $word, public readonly string $pos, public readonly array $definitions) 
 }
 
 class LookupIterator extends ResultsIterator { 
- 
-    private array $results;
- 
     public function __construct(array $results, callable $call)
-    { 
-       parent::__construct($results, $call);
-    }
-    
     public function current() : LookupResult
-    { 
-        return parent::current();
-    }
 }
+
+
