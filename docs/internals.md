@@ -4,7 +4,7 @@ PHP REST client classes and interfaces for several REST language translation and
 
 -  `RestBase`
 
-    The base class for all dictionary qnd translation classes. 
+    The base class for all dictionary and translation classes. 
 
 The client classes are:
 
