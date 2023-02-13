@@ -10,8 +10,7 @@ The client classes are:
 
 - `SystranTranslator`
 
-   implements `TranslateInterface` and `DictionaryInterface` for the [Systran Pro API]
-   (https://www.systran.net/en/translation-api/).
+   implements `TranslateInterface` and `DictionaryInterface` for the [Systran Pro API](https://www.systran.net/en/translation-api/).
    
 - `AzureTranslator`
 
