@@ -12,49 +12,31 @@ interface DictionaryInterface {
 
 class RestApi {
 
-   public  __construct(string $base_uri, array $headers); 
-   private $headers = array(); 
+   public  __construct(string $bas private $headers = array()
+   protected function request(string $method, string $route, array $options = array()) : string
 }
 
-class AzureTranslator extends RestApi implements DictionaryInterface, TranslateInterface {
-   
-    public function __construct(ClassID id)
-   
-    public function getTranslationLanguages() : array
+class ResultsIterator extends \ArrayIterator {
+  
+   public function __construct(array $results, callable $func)
+}
 
-    public function getDictionaryLanguages() : array 
+class  LookupResult {
+
+   public function __construct(public readonly string $word, public readonly string $pos, public readonly array $definitions) 
+}
+
+class LookupIterator extends ResultsIterator { 
+ 
+    private array $results;
+ 
+    public function __construct(array $results, callable $call)
+    { 
+       parent::__construct($results, $call);
+    }
     
-    public function translate(string text, string dest_lang, source_lang="") : string 
-   
-   public function  lookup(string word, string src_lang, string dest_lang) : LookupIterator
-
-   public function examples(string word, array translations) : ResultsIterator
-}
-
-class DeeplTranslator extends RestApi implements TranslateInterface {
-   
-   public function __construct(ClassID id)
-   
-   public function getLanguages() : string
-
-   public function getSourceLanguages() : array
-
-   public function getTargetLanguages() : array
-   
-   public function getTranslationLanguages() : array
-
-   public function translate(string text, string dest_lang, source_lang="") : string 
-}
-
-class SystranTranslator extends RestApi implements DictionaryInterface, TranslateInterface {
-
-   public function __construct(ClassID id)
-   
-   public function getTranslationLanguages() : array
-
-   public function getDictionaryLanguages() : array 
-    
-   public function translate(string text, string dest_lang, source_lang="") : string 
-   
-   public function lookup(string $word, string $src_lang, string $dest_lang) : LookupIterator
+    public function current() : LookupResult
+    { 
+        return parent::current();
+    }
 }
