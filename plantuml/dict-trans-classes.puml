@@ -11,14 +11,14 @@ interface DictionaryInterface {
 }
 
 
-class RestBase {
+class RestApi {
 
    public  __construct(string $base_uri, array $headers); 
   
    private $headers = array(); 
 }
 
-class AzureTranslator extends RestBase implements DictionaryInterface, TranslateInterface {
+class AzureTranslator extends RestApi implements DictionaryInterface, TranslateInterface {
    
     public function __construct(ClassID id)
    
@@ -33,7 +33,7 @@ class AzureTranslator extends RestBase implements DictionaryInterface, Translate
    public function examples(string word, array translations) : ResultsIterator
 }
 
-class DeeplTranslator extends RestBase implements TranslateInterface {
+class DeeplTranslator extends RestApi implements TranslateInterface {
    
    public function __construct(ClassID id)
    
@@ -48,7 +48,7 @@ class DeeplTranslator extends RestBase implements TranslateInterface {
    public function translate(string text, string dest_lang, source_lang="") : string 
 }
 
-class SystranTranslator extends RestBase implements DictionaryInterface, TranslateInterface {
+class SystranTranslator extends RestApi implements DictionaryInterface, TranslateInterface {
 
    public function __construct(ClassID id)
    
