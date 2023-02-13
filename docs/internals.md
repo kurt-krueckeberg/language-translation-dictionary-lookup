@@ -16,10 +16,6 @@ The client classes are:
 
    implements `TranslateInterface` and `DictionaryInterface` for the Microsoft Azure Translation service.
 
-- `LeipzipSentenceFetcher`
-
-   Implements 'SentenceFetchInerface` whose 'fetch` method Returns example sentences
-
 - `DEEPL` [Transaltor translation API](https://www.deepl.com/docs-api)
   implements  `TranslateInterface` for the DEEP:P translation service.
   
@@ -28,6 +24,10 @@ The client classes are:
   
  - `CollinsGermanDictionary` 
    implements the `DictionaryInterface` for the free Collinhs dictionary API(which requires an approval to obtains).
+
+- `LeipzipSentenceFetcher`
+
+   Implements 'SentenceFetchInerface` whose 'fetch` method Returns example sentences
 
 ## Code Internals
 
