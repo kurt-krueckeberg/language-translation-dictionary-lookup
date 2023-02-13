@@ -2,7 +2,7 @@
 <providers>
     <provider name="leipzig" >
            <headers></headers>
-           <endpoint>http://api.corpora.uni-leipzig.de/ws</endpoint> <!-- https?? -->
+           <endpoint>http://api.corpora.uni-leipzig.de/ws</endpoint>
    </provider>
        <provider name="deepl" >
            <endpoint>https://api-free.deepl.com/v2</endpoint>
