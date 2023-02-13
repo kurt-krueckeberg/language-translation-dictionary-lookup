@@ -22,10 +22,10 @@ The client classes are:
   implements `TranslateInterface` for the [DEEPL translation service ](https://www.deepl.com/docs-api)
   
  - `PonsDictionary` 
-   implements the `DictionaryInterface` for the free Pons dictionary API.
+   implements the `DictionaryInterface` for the free [Pons dictionary API](https://en.pons.com/p/online-dictionary/developers/api).
   
  - `CollinsGermanDictionary` 
-   implements the `DictionaryInterface` for the free Collinhs dictionary API(which requires an approval to obtains).
+   implements the `DictionaryInterface` for the free [Collins dictionary API](https://www.collinsdictionary.com/us/collins-api#:~:text=The%20Collins%20Dictionary%20API%20gives,%2C%20audio%20pronunciations%2C%20and%20more.), which requires an approval to obtain.
 
 - `LeipzipSentenceFetcher`
 
