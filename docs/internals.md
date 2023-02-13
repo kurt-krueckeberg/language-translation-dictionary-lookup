@@ -54,6 +54,10 @@ interface DictionaryInterface {
    public function getDictionaryLanguages() : array; 
 }
 
+interface SentenceFetchInterface  { 
+   public function fetch_samples(string $word, int $count=3) : ResultsIterator;
+}
+
 class RestBase {
 
    public  __construct(string $base_uri, array $headers); 
@@ -63,7 +67,7 @@ class RestBase {
 
 class DeeplTranslator extends RestBase implements TranslateInterface {
    
-   public function __construct(ClassID id)
+   public function __construct(ConfigFile $c)
    
    public function getLanguages() : string
 
@@ -78,7 +82,7 @@ class DeeplTranslator extends RestBase implements TranslateInterface {
 
 class SystranTranslator extends RestBase implements DictionaryInterface, TranslateInterface {
 
-   public function __construct(ClassID id)
+   public function __construct(ConfigFile $c)
    
    public function getTranslationLanguages() : array
 
@@ -87,6 +91,15 @@ class SystranTranslator extends RestBase implements DictionaryInterface, Transla
    public function translate(string text, string dest_lang, source_lang="") : string 
    
    public function lookup(string $word, string $src_lang, string $dest_lang) : LookupIterator
+}
+
+// and samiliarly for all translation and diciontary classes.
+
+class LeipzigSentenceFetcher extends RestApi implements SentenceFetchInterface {
+
+   public function __construct(ConfigFile $c)
+     
+   public function fetch_samples(string $word, int $count=3) : ResultsIterator
 }
 ```
 
