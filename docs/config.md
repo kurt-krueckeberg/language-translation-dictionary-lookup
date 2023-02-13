@@ -24,7 +24,7 @@ Tne `.xml` file format is shown below. Modify the `add-your-key-here` with your 
            </headers>
     </provider>
    <provider name='pons'>
-       <!-- use the sample-config.xml as a guide to add the endpoint and your header(s) with you key(s) -->
+       <!-- use the sample-config.xml as a guide to add the endpoint and your header(s) with your key(s) -->
     </provider> 
 </providers>
 ```
