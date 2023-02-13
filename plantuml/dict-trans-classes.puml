@@ -29,4 +29,13 @@ class LookupIterator extends ResultsIterator {
     public function current() : LookupResult
 }
 
+class SystranTranslator extends RestApi implements TranslateInterface, DictionaryInterface {
 
+   public function __construct(ConfigFile $c)
+   public function getTranslationLanguages() : array
+   final public function getDictionaryLanguages() : array
+   final public function lookup(string $word, string $src, string $dest) : LookupIterator
+   final public function translate(string $text, string $dest, $src="") : string 
+}
+
+// The other dictionary lookup and translation classes are similiar to SystranTranslate.
