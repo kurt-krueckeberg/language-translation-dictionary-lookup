@@ -1,7 +1,5 @@
 # PHP Translation and Dictionary REST API Classes
 
-## REST API
-
 There are PHP classes that support:
 
 - Translation and dictionary lookup.
