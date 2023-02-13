@@ -16,8 +16,8 @@ The client classes are:
 
    implements `TranslateInterface` and `DictionaryInterface` for the Microsoft Azure Translation service.
 
-- [`DEEPL`](https://www.deepl.com/docs-api)
-  implements  `TranslateInterface` for the DEEPL translation service.
+- `DeeplTranslate`
+  implements `TranslateInterface` for the [DEEPL translation service ](https://www.deepl.com/docs-api)
   
  - `PonsDictionary` 
    implements the `DictionaryInterface` for the free Pons dictionary API.
