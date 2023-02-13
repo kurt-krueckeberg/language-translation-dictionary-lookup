@@ -1,8 +1,8 @@
 ## Configuration
 
-Copy `src/sample-config.xml` to the root directory of your application as `config.xml` and modify it with your Systran Pro or DEEPL API key(s).
+Copy `src/sample-config.xml` to the root directory of your application as `config.xml` and modify it with your API key(s).
 
-Tne .xml file looks like this. Modiy `add-your-key-here` to  be your actual API key.
+Tne `.xml` file format is shown below. Modify the `add-your-key-here` with your actual API key.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -11,7 +11,7 @@ Tne .xml file looks like this. Modiy `add-your-key-here` to  be your actual API 
            <headers></headers>
            <endpoint>http://api.corpora.uni-leipzig.de/ws</endpoint> <!-- https?? -->
    </provider>
-       <provider name="deepl" >
+   <provider name="deepl" >
            <endpoint>https://api-free.deepl.com/v2</endpoint>
            <headers>
                <header key="Authorization">DeepL-Auth-Key add-your-key-here</header>
@@ -23,5 +23,8 @@ Tne .xml file looks like this. Modiy `add-your-key-here` to  be your actual API 
                <header key="Authorization">Key add-your-key-here</header>
            </headers>
     </provider>
+   <provider name='pons'>
+       <!-- use the sample-config.xml as a guide to add the endpoint and your header(s) -->
+    </provider> 
 </providers>
 ```
