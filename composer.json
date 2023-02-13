@@ -1,6 +1,6 @@
 {
     "name": "kurt-krueckeberg/language-translation-dictionary-lookup",
-    "description": "Systran translator REST API Language translation and dictionary lookup classes, and Univ of Leipzig German sentence corpus sentence fetcher API.",
+    "description": "PHP client classes for REST API language translation and dictionary lookup services, and for Univ of Leipzig German sentence corpus sentence fetcher API.",
     "type": "library",
     "autoload": {
         "psr-4": {
