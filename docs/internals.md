@@ -89,31 +89,3 @@ class SystranTranslator extends RestApi implements TranslateInterface, Dictionar
    final public function translate(string $text, string $dest, $src="") : string
 }
 ```
-
-### Example Sentences Retrieval Interface and Class
-
-The UML [Example Sentences Interfaces and Classes](/assets/images/sentence-fetcher.png) diagram.
-
-![UML of Examples Sentence Retrieval Class and Interface Diagram](/assets/images/sentence-fetcher.png)
-
-The example sentences retrieval interfaces and classes in UML are:
-
-```plantuml
-interface SentenceFetchInterface  { 
-
-   fetch(string word, int count=3) : ResultsIterator;
-}
-
-class LeipzigSentenceFetcher extends ResbBase implements SentenceFetchInterface {
-
-   __construct( UniLeipzigConfig c = new LeipzigConfig() )
-   
-   fetch(string word, int count=3) :  ResultsIterator
-}
-```
-
-### ResultsIterator Class
-
-The UML diagram of the [ResultsIterator class](/assets/images/results-iterator.png).
-
-![UML of ResultIterator](/assets/images/results-iterator.png)
