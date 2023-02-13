@@ -22,4 +22,10 @@
              <header key="X-Secret">add-your-key-here</header>
          </headers>
    </provider>
+   <provider name="collins" abbrev ="c">
+           <endpoint>https://api.collinsdictionary.com</endpoint>
+           <headers>
+               <header key="accessKey">add-your-key-here</header>
+           </headers>
+    </provider>
 </providers>
