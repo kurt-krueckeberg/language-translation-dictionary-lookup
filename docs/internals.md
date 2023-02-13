@@ -14,7 +14,8 @@ The client classes are:
    
 - `AzureTranslator`
 
-   implements `TranslateInterface` and `DictionaryInterface` for the Microsoft Azure Translation service.
+   implements `TranslateInterface` and `DictionaryInterface` for the Microsoft 
+   [Azure Translator service](https://azure.microsoft.com/en-us/products/cognitive-services/translator/).
 
 - `DeeplTranslate`
   
