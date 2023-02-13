@@ -2,7 +2,7 @@
 
 Copy `src/sample-config.xml` to the root directory of your application as `config.xml` and modify it with your API key(s).
 
-Tne `.xml` file format is shown below. Modify `add-your-key-here` with your actual API key.
+Tne format of the XML file is shown below. Modify `add-your-key-here` with your actual API key(s).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
