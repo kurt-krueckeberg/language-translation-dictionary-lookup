@@ -1,11 +1,9 @@
 interface TranslateInterface {
-
    public function translate(string $str, string $dest_lang, string $src_lang="") : string;
    public function getTranslationLanguages() : array;
 }
 
 interface DictionaryInterface {
-   
    public function lookup(string $str, string $src_lang, string $dest_lang) : \Iterator
    public function getDictionaryLanguages() : array
 }
@@ -16,8 +14,7 @@ class RestApi {
 }
 
 class ResultsIterator extends \ArrayIterator {
- 
-   public function __construct(array $results, callable $func)
+    public function __construct(array $results, callable $func)
 }
 
 class ResultsIterator extends \ArrayIterator {
