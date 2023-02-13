@@ -2,7 +2,7 @@
 
 PHP REST client classes and interfaces for several REST language translation and dictionary services APIs. The base class for all these classes is:
 
--  `RestBase`
+-  `RestApi`
 
     The base class for all dictionary and translation classes. 
 
@@ -58,14 +58,14 @@ interface SentenceFetchInterface  {
    public function fetch_samples(string $word, int $count=3) : ResultsIterator;
 }
 
-class RestBase {
+class RestApi {
 
    public  __construct(string $base_uri, array $headers); 
   
    private $headers = array(); 
 }
 
-class DeeplTranslator extends RestBase implements TranslateInterface {
+class DeeplTranslator extends RestApi implements TranslateInterface {
    
    public function __construct(ConfigFile $c)
    
@@ -80,7 +80,7 @@ class DeeplTranslator extends RestBase implements TranslateInterface {
    public function translate(string text, string dest_lang, source_lang="") : string 
 }
 
-class SystranTranslator extends RestBase implements DictionaryInterface, TranslateInterface {
+class SystranTranslator extends RestApi implements DictionaryInterface, TranslateInterface {
 
    public function __construct(ConfigFile $c)
    
