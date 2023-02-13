@@ -7,7 +7,7 @@ This repository contains PHP classes that support:
 
 ## Translation Classes
 
-These classes implement the `TranlateInterface`:
+These classes implement the `TranslateInterface`:
 
 - AzureTranslator implements Microsoft's Azure Translator API
 - DeeplTranslator implemenent's the DEEPL translate API
