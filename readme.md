@@ -1,13 +1,38 @@
 # PHP Translation and Dictionary REST API Classes
 
-REST API Classes for:
+## REST API
 
-- Systran Pro Translation and Dictionary Lookup. And Deepl and Microsoft Azure Translator.
-- Deepl Translator Class
-- Free Leipzig German Sentence Corpus
+There are PHP classes that support:
 
-See:
+- Translation and dictionary lookup.
+- Leipzig University Dept of Numerical Linguistics **German Sentence Corpus** REST API
 
-- [Configuration](docs/config.md)
+## Translation Classes
+
+These classes implement the `TranlateInterface`:
+
+- AzureTranslator implements Microsoft's Azure Translator API
+- DeeplTranslator implemenent's the DEEPL translate API
+- SystransTranslator implements the Systran Pro translate API
+
+## Dictonary Lookup Classes
+
+These classes implement the `DictionaryInterface`:
+
+- PonsDictionary
+- CollinsGermanDictionary
+- OxfordDictionary
+- AzureTranslator
+- SystranTranslator
+
+The `PonsDictionary` and `CollinsGermanDicionary` Lookup methods returns html (or xml in the case of PonsDictionary) results that are 
+embedded within hmtl used to display the results on the PONS and Collins Dictionary websites, respectively.
+
+These html results contain many HTML tags using various CSS classes. Both the HTML tags and CSS classes are undocumented. Therefore, to
+extract the dicionary menaings, you must study the HTML results and create, for example, custom `XPath` queries.
+
+## Reference
+
+- [Configuration file format](docs/config.md)
 - [Sample Application](docs/app.md)
 - [Code Internals](docs/internals.md)
