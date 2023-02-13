@@ -43,63 +43,50 @@ The dictionary and translation classes and interfaces in UML are:
 
 ```plantuml
 interface TranslateInterface {
-
    public function translate(string $str, string $dest_lang, string $src_lang="") : string;
    public function getTranslationLanguages() : array;
 }
 
 interface DictionaryInterface {
-   
-   public function lookup(string $str, string $src_lang, string $dest_lang) : \Iterator; 
-   public function getDictionaryLanguages() : array; 
+   public function lookup(string $str, string $src_lang, string $dest_lang) : \Iterator
+   public function getDictionaryLanguages() : array
 }
 
 interface SentenceFetchInterface  { 
-   public function fetch_samples(string $word, int $count=3) : ResultsIterator;
+   fetch(string word, int count=3) : ResultsIterator;
+}
+
+class ResultsIterator extends \ArrayIterator {
+   public function __construct(array $results, callable $func)
+   public function current() : mixed
 }
 
 class RestApi {
-
-   public  __construct(ConfigFile $c, ClassID $id);
-  
-   private $headers = array(); 
+   public  __construct(string $bas private $headers = array()
+   protected function request(string $method, string $route, array $options = array()) : string
 }
-
-class DeeplTranslator extends RestApi implements TranslateInterface {
-   
-   public function __construct(ConfigFile $c)
-   
-   public function getLanguages() : string
-
-   public function getSourceLanguages() : array
-
-   public function getTargetLanguages() : array
-   
-   public function getTranslationLanguages() : array
-
-   public function translate(string text, string dest_lang, source_lang="") : string 
-}
-
-class SystranTranslator extends RestApi implements DictionaryInterface, TranslateInterface {
-
-   public function __construct(ConfigFile $c)
-   
-   public function getTranslationLanguages() : array
-
-   public function getDictionaryLanguages() : array 
-    
-   public function translate(string text, string dest_lang, source_lang="") : string 
-   
-   public function lookup(string $word, string $src_lang, string $dest_lang) : LookupIterator
-}
-
-// and samiliarly for all translation and diciontary classes.
 
 class LeipzigSentenceFetcher extends RestApi implements SentenceFetchInterface {
+  
+   public function __construct(Config $c)  
+   public function fetch(string $word, int $count=3) : ResultsIterator  
+}
 
+class  LookupResult {
+   public function __construct(public readonly string $word, public readonly string $pos, public readonly array $definitions) 
+}
+
+class LookupIterator extends ResultsIterator { 
+    public function __construct(array $results, callable $call)
+    public function current() : LookupResult
+}
+
+class SystranTranslator extends RestApi implements TranslateInterface, DictionaryInterface {
    public function __construct(ConfigFile $c)
-     
-   public function fetch_samples(string $word, int $count=3) : ResultsIterator
+   public function getTranslationLanguages() : array
+   final public function getDictionaryLanguages() : array
+   final public function lookup(string $word, string $src, string $dest) : LookupIterator
+   final public function translate(string $text, string $dest, $src="") : string
 }
 ```
 
