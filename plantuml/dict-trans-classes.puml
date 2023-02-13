@@ -47,5 +47,3 @@ class SystranTranslator extends RestApi implements TranslateInterface, Dictionar
    final public function lookup(string $word, string $src, string $dest) : LookupIterator
    final public function translate(string $text, string $dest, $src="") : string 
 }
-
-// The other dictionary lookup and translation classes are similiar to SystranTranslate.
