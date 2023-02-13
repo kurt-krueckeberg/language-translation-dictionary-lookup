@@ -23,7 +23,7 @@ These classes implement the `DictionaryInterface`:
 - AzureTranslator
 - SystranTranslator
 
-The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return html (or optionally XML in the case of PonsDictionary). This is site-specific,
+The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return html (or optionally XML in the case of PonsDictionary) that is site-specific,
 undocumented custom HTML used to display the dictionary look-up results on the PONS and Collins Dictionary websites, respectively.
 
 Since both the HTML tags and the many classes usedare undocumented, in order to extract the actual dicionary meanings, you must study the HTML results and create,
