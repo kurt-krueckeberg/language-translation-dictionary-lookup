@@ -28,4 +28,12 @@
                <header key="accessKey">add-your-key-here</header>
            </headers>
     </provider>
+      <provider name="oxford" >
+           <endpoint>https://od-api.oxforddictionaries.com/api/v2</endpoint>
+           <headers>
+               <header key="app_id">add-your-key-here</header>
+               <header key="app_key">add-your-key-here</header>
+           </headers>
+    </provider>
+
 </providers>
