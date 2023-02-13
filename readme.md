@@ -27,7 +27,8 @@ The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return
 undocumented custom HTML used to display the dictionary look-up results on the PONS and Collins Dictionary websites, respectively.
 
 Since both the HTML tags and the many classes used are undocumented, in order to extract the actual dicionary meanings, you must study the HTML results and create,
-for example, custom `XPath` queries. The `PonsIterator`and `CollinsIterator` attempt to do this.
+for example, custom `XPath` queries that return the dictionary definitions (and any associated usage expressions). The `PonsIterator`and `CollinsIterator` attempt
+to do this.
 
 # Reference
 
