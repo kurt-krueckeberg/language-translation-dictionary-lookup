@@ -26,7 +26,7 @@ The classes that implement the `DictionaryInterface`:
 The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return **HTML** (or optionally **XML** in the case of PonsDictionary) that is specific to the
 the PONS and Collins Dictionary websites, respectively. The format of this HTML is undocumented. It is custom, site-specific HTML.
 
-Since both the HTML tags and the many CSS used are undocumented, in order to extract the  dictionary definitions (and any associated sample expressions) from
+Since both the HTML tags and the many CSS they use are undocumented, in order to extract the  dictionary definitions (and any associated sample expressions) from
 the HTML, you must implement a solution; for example, create custom `XPath` queries to extract and any associated sample expressions the dictionary definitions
 from the HTML . The `PonsIterator`and `CollinsIterator` classes are attempt to do this.
 
