@@ -1,5 +1,7 @@
 ## Sample Application
 
+This is a sample application.
+
 ```php
 <?php
 declare(strict_types=1);
