@@ -17,11 +17,11 @@ The classes that implement the `TranslateInterface`:
 
 The classes that implement the `DictionaryInterface`:
 
-- PonsDictionary
-- CollinsGermanDictionary
-- OxfordDictionary
-- AzureTranslator
-- SystranTranslator
+- [PonsDictionary](src/PonsDictionary.php)
+- [CollinsGermanDictionary](src/CollinsGermanDictionary.php)
+- [OxfordDictionary](src/OxfordDictionary.php)
+- [AzureTranslator](src/AzureTranslator.php)
+- [SystranTranslator](src/SystranTranslator.php)
 
 The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return **HTML** (or optionally **XML** in the case of PonsDictionary) that is specific to the
 the PONS and Collins Dictionary websites, respectively. The format of this HTML and the many CSS classes it uses is undocumented. It is custom, site-specific HTML.
