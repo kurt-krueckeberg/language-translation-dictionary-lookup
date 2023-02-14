@@ -52,7 +52,7 @@ try {
         echo "Translation: " . $sys->translate($de, 'en', 'de') . "\n";
 
       }
-      echo "\n--------\n";
+      echo "--------\n";
     }
  
   } catch (Exception $e) {
