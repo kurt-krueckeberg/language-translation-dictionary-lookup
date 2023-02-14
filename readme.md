@@ -30,6 +30,11 @@ Since both the HTML tags and the many classes used are undocumented, in order to
 for example, custom `XPath` queries that return the dictionary definitions, and any associated usage expressions. The `PonsIterator`and `CollinsIterator` attempt
 to do this.
 
+## Text and HTML Output Examples
+
+The `BuildHtml` class in `src/BuildHtml.php`, along with the `.css` files in the `css` directory, will create **HTML** output. See the example of how to do this in `html-example.php`.
+To create text output, see the example code in `cli-example.html`.
+
 ## Further Detailed Reference
 
 - [Configuration file format](docs/config.md)
