@@ -13,7 +13,7 @@ The classes that implement the `TranslateInterface`:
 - `DeeplTranslator` implemenent's the DEEPL translate API
 - `SystransTranslator` implements the Systran Pro translate API
 
-## Dictonary Lookup Classes
+## Dictionary Lookup Classes
 
 The classes that implement the `DictionaryInterface`:
 
