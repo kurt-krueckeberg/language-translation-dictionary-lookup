@@ -3,7 +3,7 @@
 This repository contains PHP classes that support:
 
 - Translation and dictionary lookup.
-- The Leipzig University Department of Numerical Linguistics **German Sentence Corpus** REST API
+- The Leipzig University Department of Numerical Linguistics **German Sentence Corpus** [REST API](http://api.corpora.uni-leipzig.de/ws/swagger-ui.html#/).
 
 ## Translation Classes
 
