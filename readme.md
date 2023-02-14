@@ -7,7 +7,7 @@ This repository contains PHP classes that support:
 
 ## Translation Classes
 
-These classes implement the `TranslateInterface`:
+The classes that implement the `TranslateInterface`:
 
 - AzureTranslator implements Microsoft's Azure Translator API
 - DeeplTranslator implemenent's the DEEPL translate API
@@ -15,7 +15,7 @@ These classes implement the `TranslateInterface`:
 
 ## Dictonary Lookup Classes
 
-These classes implement the `DictionaryInterface`:
+The classes that implement the `DictionaryInterface`:
 
 - PonsDictionary
 - CollinsGermanDictionary
@@ -23,12 +23,12 @@ These classes implement the `DictionaryInterface`:
 - AzureTranslator
 - SystranTranslator
 
-The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return html (or optionally XML in the case of PonsDictionary) that is site-specific,
-undocumented custom HTML used to display the dictionary look-up results on the PONS and Collins Dictionary websites, respectively.
+The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return **HTML** (or optionally XML in the case of PonsDictionary) that is specific to the
+the PONS and Collins Dictionary websites, respectively. The format of this HTML is undocumented. It is custom, site-specific HTML.
 
-Since both the HTML tags and the many classes used are undocumented, in order to extract the actual dicionary meanings, you must study the HTML results and create,
-for example, custom `XPath` queries that return the dictionary definitions, and any associated usage expressions. The `PonsIterator`and `CollinsIterator` attempt
-to do this.
+Since both the HTML tags and the many CSS used are undocumented, in order to extract the actual dicionary definitions (and any associated sample expressions) from
+the HTML, you must study the HTML results and implement aqs solution; for example, create custom `XPath` queries to extract from the HTML, the dictionary definitions
+and any associated sample expressions. TThe `PonsIterator`and `CollinsIterator` classes are attempt to do this.
 
 ## Text and HTML Output Examples
 
