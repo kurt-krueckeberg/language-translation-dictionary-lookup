@@ -15,7 +15,7 @@ The classes that implement the `TranslateInterface`:
 
 - [AzureTranslator](src/AzureTranslator.php) implements Microsoft's [Azure Translator API](https://learn.microsoft.com/en-us/azure/cognitive-services/translator/translator-text-apis?tabs=csharp)
 - [DeeplTranslator](src/DeeplTranslator.php) implemenent's the [DEEPL translate API](https://www.deepl.com/en/docs-api/)
-- [SystranTranslator](src/SystranTranslator.php) implements the Systran Pro translate API
+- [SystranTranslator](src/SystranTranslator.php) implements the[Systran Pro translate API](https://docs.systran.net/translateAPI/en/)
 
 ## Dictionary Lookup Classes
 
