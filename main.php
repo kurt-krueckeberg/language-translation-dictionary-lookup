@@ -49,7 +49,7 @@ try {
 
         echo $de . "\n";
 
-        echo "Translation:\n" . $sys->translate($de, 'en', 'de');
+        echo "Translation: " . $sys->translate($de, 'en', 'de') . "\n";
 
       }
       echo "\n--------\n";
