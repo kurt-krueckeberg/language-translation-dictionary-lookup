@@ -1,6 +1,6 @@
 ## Configuration
 
-Copy [src/sample-config.xml](src/sample-config.xml) to the root directory of your application as `config.xml` and modify it with your API key(s).
+Copy [src/sample-config.xml](../src/sample-config.xml) to the root directory of your application as `config.xml` and modify it with your API key(s).
 
 Tne format of the XML file is shown below. Modify `add-your-key-here` with your actual API key(s).
 
