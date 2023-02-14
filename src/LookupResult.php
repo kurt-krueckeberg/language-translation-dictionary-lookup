@@ -10,23 +10,13 @@ class  LookupResult {
        
    }
 
-   private function get_definitions() : string 
-   {
-      foreach($definitions as $result)  {
-
-          $defns = $this->add_defn($result->definitions);
-          
-      }
-           
-   }
-
-   private function add_defn(array $definitions) : string
+    private function get_definitions() : string
    {       
       $str = '';
 
-      foreach ($definitions as $defn) {
+      foreach ($this->definitions as $defn) {
 
-        $str = $defn["definition"]\n";
+        $str = '- ' . $defn["definition"] . "\n";
 
         if (count($defn['expressions']) == 0) continue;
               
@@ -34,7 +24,7 @@ class  LookupResult {
          
          foreach ($defn['expressions'] as $expression) 
 
-            $exps .= $expression->source .  ' ' . $expression->target);
+            $exps .= $expression->source .  ' ' . $expression->target;
 
          $str. $exps;
       }
@@ -42,7 +32,7 @@ class  LookupResult {
     }
   
    public function __toString() : string 
-   dds{
-     echo $this->word . ' ' . 'part of speech: ' . $this->pos . "\nDefinitions:\n". $this->get_definitiond();
+   {
+     return "Word: " . $this->word . "\n" . "Part of speech: " . $this->pos . "\nDefinitions:\n". $this->get_definitions();
    }        
 }

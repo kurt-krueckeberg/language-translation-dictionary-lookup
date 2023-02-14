@@ -34,9 +34,9 @@ try {
         
       $iter = $sys->lookup($word, 'de', 'en');
       
-      if ($iter->valid() === false)  echo "No definitions found for $word./n";
+      if ($iter->valid() === false)  echo "No definitions found for $word\n";
 
-	    else
+      else
           foreach($iter as $val) 
              
              echo (string) $val . "\n";
@@ -51,7 +51,8 @@ try {
 
         echo "Translation:\n" . $sys->translate($de, 'en', 'de');
 
-      }           
+      }
+      echo "-----\n";
     }
  
   } catch (Exception $e) {
