@@ -7,7 +7,7 @@ This repository contains PHP classes that support:
 
 ## Leipzig German Sentence Corpus Sample Sentences
 
-The class that implements the [SentenceFetchInterface](src/SentneceFetchInterface.php) is [LeipzigSentneceFetcher.php](src/LeipzigSentenceFetcher.php).
+The class that implements the [SentenceFetchInterface](src/SentenceFetchInterface.php) is [LeipzigSentneceFetcher.php](src/LeipzigSentenceFetcher.php).
 ## Translation Classes
 
 The classes that implement the `TranslateInterface`:
