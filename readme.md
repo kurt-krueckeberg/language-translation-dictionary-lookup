@@ -32,7 +32,7 @@ to do this.
 
 ## Text and HTML Output Examples
 
-The `BuildHtml` class in `src/BuildHtml.php`, along with the `.css` files in the `css` directory, will create **HTML** output. See the example of how to do this in `html-example.php`.
+The `BuildHtml` class in `src/BuildHtml.php`, along with the `.css` files in the `css` directory, will create **HTML** output. See the example of how to use `BuildHtml` in `html-example.php`.
 To create text output, see the example code in `cli-example.html`.
 
 ## Further Detailed Reference
