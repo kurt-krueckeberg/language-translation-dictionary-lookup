@@ -27,8 +27,8 @@ The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return
 the PONS and Collins Dictionary websites, respectively. The format of this HTML is undocumented. It is custom, site-specific HTML.
 
 Since both the HTML tags and the many CSS used are undocumented, in order to extract the  dictionary definitions (and any associated sample expressions) from
-the HTML, you must study the HTML results and implement aqs solution; for example, create custom `XPath` queries to extract from the HTML, the dictionary definitions
-and any associated sample expressions. TThe `PonsIterator`and `CollinsIterator` classes are attempt to do this.
+the HTML, you must implement a solution; for example, create custom `XPath` queries to extract and any associated sample expressions the dictionary definitions
+from the HTML . The `PonsIterator`and `CollinsIterator` classes are attempt to do this.
 
 ## Text and HTML Output Examples
 
