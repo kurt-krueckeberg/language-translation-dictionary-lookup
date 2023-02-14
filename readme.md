@@ -27,12 +27,15 @@ The `PonsDictionary` and `CollinsGermanDicionary` `Lookup($word)` methods return
 the PONS and Collins Dictionary websites, respectively. The format of this HTML is undocumented. It is custom, site-specific HTML.
 
 Since both the HTML tags and the many CSS they use are undocumented, you must implement a custom solution to extract the dictionary definitions (and any associated
-sample expressions) by, for example, creating custom `XPath` queries that extract the definitions and any associated sample expressions from the HTML . The `PonsIterator`and `CollinsIterator` classes are attempt to do this.
+sample expressions). The `PonsIterator`and `CollinsIterator` classes are attempt to do this using `XPath` queries that extract the definitions and any associated sample
+expressions from the HTML.
 
 ## Text and HTML Output Examples
 
-The `BuildHtml` class in `src/BuildHtml.php`, along with the `.css` files in the `css` directory, will create **HTML** output. See the example of how to use `BuildHtml` in `html-example.php`.
-To create text output, see the example code in `cli-example.html`.
+The `BuildHtml` class in `src/BuildHtml.php`, along with the `.css` files in the `css` directory, creates attractive **HTML** output. To use it, follow the example in
+`html-example.php`.
+
+To create text output, follow the example code in `cli-example.html`.
 
 ## Further Detailed Reference
 
