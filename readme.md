@@ -35,7 +35,7 @@ associated sample expressions from the HTML.
 The `BuildHtml` class in `src/BuildHtml.php`, along with the `.css` files in the `css` directory, creates attractive **HTML** output. To use it, follow the example in
 [html-example.php](html-example.php).
 
-To create text output, follow the example code in [cli-example.html](cli-example.html).
+To create text output, follow the example code in [cli-example.php](cli-example.php).
 
 ## Further Detailed Reference
 
