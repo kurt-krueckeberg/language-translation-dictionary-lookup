@@ -36,11 +36,12 @@ try {
       
       if ($iter->valid() === false)  echo "No definitions found for $word./n";
 
-      else
+	    else
           foreach($iter as $val) 
-              print_r($val);
+             
+             echo (string) $val . "\n";
 
-      $iter = $leipzig->fetch_samples($word);
+      $iter = $leipzig->fetch_samples($word, 5);
 
       if ($iter->valid() === false) continue;
 
@@ -48,13 +49,11 @@ try {
 
         echo $de . "\n";
 
-        echo "Translation:\n";
-        
-        $t = $sys->translate($de, 'en', 'de');
-        
-        echo $t . "\n";
+        echo "Translation:\n" . $sys->translate($de, 'en', 'de');
+
       }           
-    } 
+    }
+ 
   } catch (Exception $e) {
 
       echo "Exception: message = " . $e->getMessage() . "\nError Code = " . $e->getCode() . "\n";
