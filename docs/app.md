@@ -8,9 +8,9 @@ use LanguageTools\{SystranTranslator, LeipzigSentenceFetcher, FileReader, Config
 
 include 'vendor/autoload.php';
 
-if ($argc != 3) {
+if ($argc != 2) {
 
-  echo "Enter the vocabulary words input file, followed by html file name (without .html).\n";
+  echo "Enter the vocabulary words input file.\n";
   return;
 
 } else if (! file_exists($argv[1]))  {
@@ -37,11 +37,12 @@ try {
         
       $iter = $sys->lookup($word, 'de', 'en');
       
-      if ($iter->valid() === false)  echo "No definitions found for $word./n";
+      if ($iter->valid() === false)  echo "No definitions found for $word\n";
 
-	    else
+      else
           foreach($iter as $val) 
-              print_r($val);
+             
+             echo (string) $val . "\n";
 
       $iter = $leipzig->fetch_samples($word, 5);
 
@@ -51,13 +52,14 @@ try {
 
         echo $de . "\n";
 
-        echo "Translation:\n" . $sys->translate($de, 'en', 'de');
+        echo "Translation: " . $sys->translate($de, 'en', 'de') . "\n";
 
-      }           
+      }
+      echo "--------\n";
     }
  
   } catch (Exception $e) {
 
       echo "Exception: message = " . $e->getMessage() . "\nError Code = " . $e->getCode() . "\n";
-  } 
+  }
 ```
