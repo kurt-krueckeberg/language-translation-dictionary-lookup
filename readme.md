@@ -18,7 +18,7 @@ The classes that implement the `TranslateInterface`:
 
 ## Dictionary Lookup Classes
 
-The classes that implement the `DictionaryInterface`:
+The classes that implement the [DictionaryInterface](src/DictionaryInterface.php):
 
 - [PonsDictionary](src/PonsDictionary.php)
 - [CollinsGermanDictionary](src/CollinsGermanDictionary.php)
