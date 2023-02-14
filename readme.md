@@ -9,9 +9,9 @@ This repository contains PHP classes that support:
 
 The classes that implement the `TranslateInterface`:
 
-- `AzureTranslator` implements Microsoft's Azure Translator API
-- `DeeplTranslator` implemenent's the DEEPL translate API
-- `SystransTranslator` implements the Systran Pro translate API
+- [AzureTranslator](src/AzureTranslator.php) implements Microsoft's Azure Translator API
+- [DeeplTranslator](src/DeeplTranslator,php) implemenent's the DEEPL translate API
+- [SystransTranslator](src=SystransTranslator,php) implements the Systran Pro translate API
 
 ## Dictionary Lookup Classes
 
