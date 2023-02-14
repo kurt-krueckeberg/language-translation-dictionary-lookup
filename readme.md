@@ -5,7 +5,7 @@ This repository contains PHP classes that support:
 - Translation and dictionary lookup.
 - The Leipzig University Department of Numerical Linguistics **German Sentence Corpus** [REST API](http://api.corpora.uni-leipzig.de/ws/swagger-ui.html#/).
 
-## Leipzig German Sentence Corpus Sample Sentences
+## Leipzig German Sentence Corpus Sample Sentences Class
 
 The class that implements the [SentenceFetchInterface](src/SentenceFetchInterface.php) is [LeipzigSentenceFetcher](src/LeipzigSentenceFetcher.php).
 ## Translation Classes
