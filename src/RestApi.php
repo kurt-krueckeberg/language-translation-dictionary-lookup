@@ -20,7 +20,7 @@ class RestApi {
        return $response->getBody()->getContents();
    }
  
-   public function __construct(ConfigFile $c, ClassID $id)
+   public function __construct(ConfigFile $c, ProviderID $id)
    {      
        $params = $c->get_config($id);
        

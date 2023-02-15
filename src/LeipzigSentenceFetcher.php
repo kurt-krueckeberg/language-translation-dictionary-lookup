@@ -4,12 +4,11 @@ namespace LanguageTools;
 
 class LeipzigSentenceFetcher extends RestApi implements SentenceFetchInterface {
 
-   private static $route = "sentences/deu_news_2012_1M/sentences" ;
    private static $method = 'GET';
  
-   public function __construct(ConfigFile $c)
+   public function __construct(ConfigFile $c, ProviderID $id)
    {       
-      parent::__construct($c, ClassID::Leipzig);    
+      parent::__construct($c, $id);    
    }
    
    public function fetch_samples(string $word, int $count=3) : ResultsIterator
