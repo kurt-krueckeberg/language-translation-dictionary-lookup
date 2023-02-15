@@ -30,9 +30,7 @@ class AzureTranslator extends RestApi implements DictionaryInterface, TranslateI
    
    public function __construct(ConfigFile $c)
    {
-       $a = $c->get_config(ClassID::Azure);      
-       
-       parent::__construct($a['base_uri'], $a['headers']);        
+       parent::__construct($c, ProviderID::Azure);        
    }
 
    // If no source language is given, it will be auto-detected.

@@ -11,7 +11,7 @@ class SystranTranslator extends RestApi implements TranslateInterface, Dictionar
    
    public function __construct(ConfigFile $c)
    {
-      parent::__construct($c, ClassID::Systran); 
+      parent::__construct($c, ProviderID::Systran); 
    }
 
    public function getTranslationLanguages() : array

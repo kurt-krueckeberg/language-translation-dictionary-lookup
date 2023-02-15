@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <providers>
-    <provider name="leipzig" >
-           <headers></headers>
-           <endpoint>http://api.corpora.uni-leipzig.de/ws</endpoint>
-   </provider>
+    <provider name="leipzig_de" >
+        <headers></headers>
+        <endpoint>https://api.wortschatz-leipzig.de/ws/sentences/deu_news_2012_1M/sentences/</endpoint> 
+       </provider>
+   <provider name="leipzig_es" >
+    <headers></headers>
+    <endpoint>https://api.wortschatz-leipzig.de/ws/sentences/spa_news_2011_3M/sentences/</endpoint> 
        <provider name="deepl" >
            <endpoint>https://api-free.deepl.com/v2</endpoint>
            <headers>

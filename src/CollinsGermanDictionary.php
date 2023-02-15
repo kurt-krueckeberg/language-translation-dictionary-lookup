@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 namespace LanguageTools;
-use LanguageTools\ClassID;
+use LanguageTools\ProviderID;
 use LanguageTools\CssCollins;
 
 class CollinsGermanDictionary extends RestApi /* implements DictionaryInterface */
@@ -24,7 +24,7 @@ class CollinsGermanDictionary extends RestApi /* implements DictionaryInterface 
 
    public function __construct(ConfigFile $c)
    {
-       parent::__construct($c, ClassID::Collins);
+       parent::__construct($c, Provider::Collins);
    }
 
 

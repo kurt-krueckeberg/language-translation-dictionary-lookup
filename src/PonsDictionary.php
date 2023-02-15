@@ -14,7 +14,7 @@ class PonsDictionary extends RestApi implements DictionaryInterface {
    
    public function __construct(ConfigFile $c)
    {
-       parent::__construct($c->get_config(ClassID::Pons)); 
+       parent::__construct($c, ProviderID::Pons); 
    }
 
    final public function getDictionaryLanguages() : array 

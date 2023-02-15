@@ -10,7 +10,7 @@ class OxfordDictionary extends RestApi implements DictionaryInterface, SentenceF
    
    public function __construct(ConfigFile $c)
    {
-      parent::__construct($c, ClassID::Oxford);
+      parent::__construct($c, Provider::Oxford);
    }
 
 

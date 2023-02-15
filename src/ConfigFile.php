@@ -17,7 +17,7 @@ class ConfigFile {
      $this->xml = simplexml_load_file($xml_name);
    }
 
-    public function get_config(ClassID $id) : array
+    public function get_config(ProviderID $id) : array
     {
         $simplexml = $this->get_xml_element($id->get_provider());
 

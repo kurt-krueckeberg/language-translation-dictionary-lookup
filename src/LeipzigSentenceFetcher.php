@@ -13,7 +13,7 @@ class LeipzigSentenceFetcher extends RestApi implements SentenceFetchInterface {
    
    public function fetch_samples(string $word, int $count=3) : ResultsIterator
    {
-      $route = self::$route. '/' . urlencode($word);
+      $route = urlencode($word);
 
       $contents = $this->request(self::$method, $route , ['query' => ['offset' => 0, 'limit' => $count]]);
       
